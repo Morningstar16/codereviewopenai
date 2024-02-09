@@ -6,6 +6,8 @@ import sys
 import webbrowser
 
 import openai
+import requests
+
 from tqdm import tqdm
 
 os.environ["OPENAI_API_KEY"] = "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"
@@ -102,13 +104,13 @@ def create_html_output(title, description, changes, prompt):
     # Generate the HTML output
     html_output = "<html>\n<head>\n<style>\n"
     html_output += "body {\n    font-family: Roboto, Ubuntu, Cantarell, Helvetica Neue, sans-serif;\n    margin: 0;\n    padding: 0;\n}\n"
-    html_output += "pre {\n    white-space: pre-wrap;\n    background-color: #f6f8fa;\n    border-radius: 3px;\n    font-size: 85%;\n    line-height: 1.45;\n    overflow: auto;\n    padding: 16px;\n}\n"
+    html_output += "pre {\n    white-space: pre-wrap;\n    background-color: c793ff;\n    border-radius: 3px;\n    font-size: 85%;\n    line-height: 1.45;\n    overflow: auto;\n    padding: 16px;\n}\n"
     html_output += "</style>\n"
     html_output += '<link rel="stylesheet"\n href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">\n <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>\n'
     html_output += "<script>hljs.highlightAll();</script>\n"
     html_output += "</head>\n<body>\n"
-    html_output += "<div style='background-color: #333; color: #fff; padding: 20px;'>"
-    html_output += "<h1 style='margin: 0;'>AI code review</h1>"
+    html_output += "<div style='background-color: c793ff; color: #000; padding: 20px;'>"
+    html_output += "<h1 style='margin: 0;'>AI code reviewer</h1>"
     html_output += f"<h3>Diff to review: {title}</h3>" if title else ""
     html_output += "</div>"
 
