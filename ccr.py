@@ -5,7 +5,9 @@ import string
 import sys
 import webbrowser
 
+from openai import OpenAI
 import openai
+# import OpenAI
 import requests
 
 from tqdm import tqdm
