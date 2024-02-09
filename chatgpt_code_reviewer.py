@@ -7,6 +7,7 @@ import webbrowser
 
 import openai
 from tqdm import tqdm
+from config import PROMPT_TEMPLATE
 
 openai.api_key = os.environ["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"]
 
@@ -157,3 +158,4 @@ def main():
 if __name__ == "__main__":
     main()
  
+
