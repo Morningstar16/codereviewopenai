@@ -9,7 +9,9 @@ import openai
 from tqdm import tqdm
 from config import PROMPT_TEMPLATE
 
-openai.api_key = os.environ["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"]
+os.environ["OPENAI_API_KEY"] = "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"
+
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 def add_code_tags(text):
     # Find all the occurrences of text surrounded by backticks
